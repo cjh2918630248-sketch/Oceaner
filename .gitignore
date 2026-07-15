@@ -1,0 +1,186 @@
+# =========================
+# C++ compiled artifacts
+# =========================
+
+*.o
+*.obj
+*.ko
+*.elf
+*.a
+*.lib
+*.la
+*.lo
+*.dll
+*.so
+*.so.*
+*.dylib
+
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+*.gch
+*.pch
+*.ifc
+*.ifc.d.json
+*.ifc.json
+
+*.ilk
+*.map
+*.exp
+*.pdb
+*.idb
+*.ipdb
+*.iobj
+*.dSYM/
+*.su
+
+*.mod
+*.smod
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+_deps/
+compile_commands.json
+build/
+build-*/
+out/
+cmake-build-*/
+
+# Make / Ninja / Meson
+Makefile
+!Makefile.am
+!Makefile.in
+!**/Makefile
+!**/GNUmakefile
+*.d
+.ninja_deps
+.ninja_log
+meson-private/
+meson-logs/
+
+# Visual Studio / MSVC
+.vs/
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.vcxproj.filters
+*.vcxproj.user
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+ipch/
+x64/
+x86/
+[Dd]ebug/
+[Rr]elease/
+[Rr]eleases/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+*.iml
+*.ipr
+*.iws
+
+# VS Code / Cursor
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Xcode
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/xcshareddata/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+# vcpkg
+vcpkg_installed/
+vcpkg-manifest-install.log
+
+# Conan
+conanbuildinfo.*
+conaninfo.txt
+conan.lock
+graph_info.json
+CMakeUserPresets.json
+
+# Testing / coverage / profiling
+*.gcno
+*.gcda
+*.gcov
+coverage/
+*.prof
+*.profraw
+gmon.out
+callgrind.out.*
+cachegrind.out.*
+Testing/
+
+# Documentation
+docs/html/
+docs/latex/
+doxygen/
+*.tag
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Misc
+core
+core.*
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.orig
+
+.env
+.env.*
+!.env.example
