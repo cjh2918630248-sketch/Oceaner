@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON) # 强制使用指定版本
 # raylib 路径
 set(RAYLIB_DIR ${CMAKE_SOURCE_DIR}/3rdParty/raylib)
 
-add_executable(Oceaner main.cpp)
+add_executable(Oceaner src/main.cpp)
 
 target_include_directories(Oceaner PRIVATE
     ${RAYLIB_DIR}/include
