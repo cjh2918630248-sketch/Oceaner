@@ -8,15 +8,24 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON) # 强制使用指定版本
 # raylib 路径
 set(RAYLIB_DIR ${CMAKE_SOURCE_DIR}/3rdParty/raylib)
 
+# pahomqtt 路径
+set(PAHO_MQTT_DIR ${CMAKE_SOURCE_DIR}/3rdParty/paho.mqtt.cpp/build_sdk_debug)
+
 add_executable(Oceaner src/main.cpp)
+
+if(WIN32)
+ target_compile_definitions(Oceaner PRIVATE PAHO_MQTTPP_IMPORTS PAHO_MQTT_IMPORTS)
+endif()
 
 target_include_directories(Oceaner PRIVATE
     ${RAYLIB_DIR}/include
     ${CMAKE_SOURCE_DIR}/3rdParty/nlohmann
+    ${PAHO_MQTT_DIR}/include
 )
 
 target_link_directories(Oceaner PRIVATE
     ${RAYLIB_DIR}/lib
+    ${PAHO_MQTT_DIR}/lib
 )
 
 if(WIN32)
