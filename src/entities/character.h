@@ -14,19 +14,19 @@ public:
     virtual ~Character() = default;
 
     CharacterType getType() const;
-    std::string getName() const;
-    void setName(std::string name);
-    int getHp() const;
-    int getPhysicalAttack() const;
+    virtual std::string getName() const = 0;
+    virtual void setName(std::string name);
+    virtual int getHp() const = 0;
+    virtual int getPhysicalAttack() const = 0;
     int getSeaPower() const;
-    int getDefense() const;
-    void setHp(int hp);
-    void setPhysicalAttack(int physicalAttack);
+    virtual int getDefense() const;
+    virtual void setHp(int hp) = 0;
+    virtual void setPhysicalAttack(int physicalAttack) = 0;
     void setSeaPower(int seaPower);
-    void setDefense(int defense);
-    void setType(CharacterType type);
+    virtual void setDefense(int defense) = 0;
+    virtual void setType(CharacterType type);
 
-private:
+protected:
     std::string m_name = "";
     int m_hp; // 生命值
     int m_physicalAttack; // 物理攻击

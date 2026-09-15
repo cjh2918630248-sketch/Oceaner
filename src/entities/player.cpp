@@ -34,30 +34,34 @@ nlohmann::json Player::readFromJson() {
     return j;
 }
 
-std::string Player::getName() const override {
+std::string Player::getName() const {
     return m_name;
 }
 
-void Player::setName(std::string name) override {
+void Player::setName(std::string name) {
     this->m_name = name;
 }
 
-int Player::getHp() const override {
+int Player::getHp() const {
     return m_hp;
 }
 
-void Player::setHp(int hp) override {
+void Player::setHp(int hp) {
     this->m_hp = hp;
 }
 
-void Player::setPhysicalAttack(int physicalAttack) override {
+int Player::getPhysicalAttack() const {
+    return m_physicalAttack;
+}
+
+void Player::setPhysicalAttack(int physicalAttack) {
     this->m_physicalAttack = physicalAttack;
 }
 
-void Player::setDefense(int defense) override {
+void Player::setDefense(int defense) {
     this->m_defense = defense;
 }
 
-void Player::setHp(int hp) override {
-    this->m_hp = hp;
+int Player::getDefense() const {
+    return m_defense;
 }
