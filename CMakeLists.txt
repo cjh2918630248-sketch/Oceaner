@@ -22,7 +22,11 @@ set(ICONV_DIR ${CMAKE_SOURCE_DIR}/3rdParty/iconv)
 
 
 
-add_executable(Oceaner src/main.cpp)
+add_executable(Oceaner src/main.cpp
+ src/entities/character.cpp
+ src/entities/character.h
+ src/entities/player.h
+ src/entities/player.cpp)
 
 if(WIN32)
  target_compile_definitions(Oceaner PRIVATE PAHO_MQTTPP_IMPORTS PAHO_MQTT_IMPORTS)
