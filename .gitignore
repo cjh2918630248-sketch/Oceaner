@@ -41,6 +41,8 @@
 *.mod
 *.smod
 
+*.cache
+
 # CMake
 CMakeCache.txt
 CMakeFiles/

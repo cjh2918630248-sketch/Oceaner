@@ -1,0 +1,11 @@
+{
+    "Gebulin": {
+        "Name": "哥布林",
+        "Status":{
+            "Hp": 1650,
+            "PhysicalAttack": 200,
+            "Defense": 100,
+            "SeaPower": 0
+        }
+    }
+}

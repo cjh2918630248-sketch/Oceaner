@@ -1,0 +1,10 @@
+{
+    "Player": {
+        "Name": "Skadi",
+        "Status":{
+            "Hp": 1521,
+            "Defense": 116
+        },
+        "Weapon": "Sword"
+    }
+}
