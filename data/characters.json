@@ -5,6 +5,7 @@
             "Hp": 1521,
             "Defense": 116
         },
-        "Weapon": "Sword"
+        "Weapon": "Sword",
+        "physicalAttack": 100
     }
 }

@@ -3,7 +3,7 @@
 #include <string>
 
 Character::Character() {
-    type = CharacterType::PLAYER;
+    m_type = CharacterType::PLAYER;
 }
 
 CharacterType Character::getType() const {
