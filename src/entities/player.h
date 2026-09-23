@@ -15,8 +15,6 @@ public:
     void setHp(int hp) override;
     int getPhysicalAttack() const override;
     void setPhysicalAttack(int physicalAttack) override;
-    int getSeaPower() = delete;
-    void setSeaPower(int seaPower) = delete;
     int getDefense() const override;
     void setDefense(int defense) override;
     std::string getName() const override;

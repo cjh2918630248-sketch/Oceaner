@@ -1,5 +1,6 @@
 {
     "Gebulin": {
+        "Id": "1",
         "Name": "哥布林",
         "Status":{
             "Hp": 1650,

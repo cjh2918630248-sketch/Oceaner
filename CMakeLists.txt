@@ -26,7 +26,11 @@ add_executable(Oceaner src/main.cpp
  src/entities/character.cpp
  src/entities/character.h
  src/entities/player.h
- src/entities/player.cpp)
+ src/entities/player.cpp
+ src/entities/enemy.h
+ src/entities/enemy.cpp
+ src/entities/weapon.h
+ src/entities/weapon.cpp)
 
 if(WIN32)
  target_compile_definitions(Oceaner PRIVATE PAHO_MQTTPP_IMPORTS PAHO_MQTT_IMPORTS)
