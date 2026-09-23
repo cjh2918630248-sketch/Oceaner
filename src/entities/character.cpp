@@ -14,10 +14,6 @@ int Character::getPhysicalAttack() const {
     return m_physicalAttack;
 }
 
-int Character::getSeaPower() const {
-    return m_seaPower;
-}
-
 int Character::getDefense() const {
     return m_defense;
 }
@@ -32,10 +28,6 @@ void Character::setHp(int hp) {
 
 void Character::setPhysicalAttack(int physicalAttack) {
     this->m_physicalAttack = physicalAttack;
-}
-
-void Character::setSeaPower(int seaPower) {
-    this->m_seaPower = seaPower;
 }
 
 std::string Character::getName() const {

@@ -1,5 +1,6 @@
 {
-    "Sword": {
+    "Sword01": {
+        "Id": "1",
         "Name": "大剑",
         "PhysicalAttack": 452,
         "SeaPower": 0
