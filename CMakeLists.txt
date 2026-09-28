@@ -30,13 +30,22 @@ add_executable(Oceaner src/main.cpp
  src/entities/enemy.h
  src/entities/enemy.cpp
  src/entities/weapon.h
- src/entities/weapon.cpp)
+ src/entities/weapon.cpp
+ src/scenes/scene.h
+ src/core/SceneManager.h
+ src/core/SceneManager.cpp
+ src/core/Game.h
+ src/core/Game.cpp
+ src/scenes/TitleScene.h
+ src/scenes/TitleScene.cpp
+ )
 
 if(WIN32)
  target_compile_definitions(Oceaner PRIVATE PAHO_MQTTPP_IMPORTS PAHO_MQTT_IMPORTS)
 endif()
 
 target_include_directories(Oceaner PRIVATE
+    ${CMAKE_SOURCE_DIR}/src
     ${RAYLIB_DIR}/include
     ${CMAKE_SOURCE_DIR}/3rdParty/nlohmann
     ${PAHO_MQTT_DIR}/include
