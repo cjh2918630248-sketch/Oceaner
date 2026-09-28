@@ -38,6 +38,12 @@ add_executable(Oceaner src/main.cpp
  src/core/Game.cpp
  src/scenes/TitleScene.h
  src/scenes/TitleScene.cpp
+ src/systems/DamageCalculator.h
+ src/systems/DamageCalculator.cpp
+ src/systems/BattleSystem.h
+ src/systems/BattleSystem.cpp
+ src/scenes/BattleScene.h
+ src/scenes/BattleScene.cpp
  )
 
 if(WIN32)

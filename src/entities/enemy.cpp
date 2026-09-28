@@ -54,27 +54,27 @@ void Enemy::setName(std::string name) {
 }
 
 int Enemy::getHp() const {
-    return m_hp;
+    return m_status->hp;
 }
 
 void Enemy::setHp(int hp) {
-    this->m_hp = hp;
+    this->m_status->hp = hp;
 }
 
 int Enemy::getPhysicalAttack() const {
-    return m_physicalAttack;
+    return m_status->physicalAttack;
 }
 
 void Enemy::setPhysicalAttack(int physicalAttack) {
-    this->m_physicalAttack = physicalAttack;
+    this->m_status->physicalAttack = physicalAttack;
 }
 
 int Enemy::getDefense() const {
-    return m_defense;
+    return m_status->defense;
 }
 
 void Enemy::setDefense(int defense) {
-    this->m_defense = defense;
+    this->m_status->defense = defense;
 }
 
 int Enemy::getSeaPower() const {
