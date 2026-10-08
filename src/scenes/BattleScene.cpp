@@ -1,5 +1,8 @@
 #include "scenes/BattleScene.h"
+#include "core/SceneManager.h"
+#include "scenes/TitleScene.h"
 #include <raylib.h>
+#include <memory>
 
 BattleScene::BattleScene()
     : m_enemy(static_cast<short>(EnemyType::ENEMY01)),
@@ -11,7 +14,11 @@ BattleScene::~BattleScene() {
 }
 
 void BattleScene::Update() {
-    if (IsKeyPressed(KEY_SPACE)) {
+    if(IsKeyPressed(KEY_ESCAPE)) {
+        m_sceneManager->ChangeScene(std::make_unique<TitleScene>()); return ;
+    }
+
+    if(IsKeyPressed(KEY_SPACE)) {
         m_battle.PlayerAttack();
     }
     m_battle.Update();

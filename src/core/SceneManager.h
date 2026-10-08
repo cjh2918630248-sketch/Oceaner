@@ -19,8 +19,12 @@ public:
     bool ShouldQuit() const;
 
 private:
+    void ProcessPendingChanges();
+    
     std::vector<std::unique_ptr<Scene>> m_scenes;
+    std::unique_ptr<Scene> m_pendingScene;
     bool m_shouldQuit = false;
+    bool m_pendingChange = false ;
 };
 
 #endif

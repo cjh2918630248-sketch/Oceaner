@@ -1,6 +1,8 @@
 #include "scenes/TitleScene.h"
 #include "core/SceneManager.h"
+#include "scenes/BattleScene.h"
 #include <stdio.h>
+#include <memory>
 
 TitleScene::TitleScene() {
     int codepoints[] = {
@@ -27,6 +29,10 @@ TitleScene::~TitleScene() {
 
 void TitleScene::Update() {
     Vector2 mouse = GetMousePosition();
+
+    if (CheckCollisionPointRec(mouse, m_continueButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+        m_sceneManager->ChangeScene(std::make_unique<BattleScene>());
+    }
 
     if (CheckCollisionPointRec(mouse, m_exitButton) &&
         IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {

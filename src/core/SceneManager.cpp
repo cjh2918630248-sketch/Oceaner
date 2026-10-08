@@ -12,17 +12,15 @@ void SceneManager::PopScene() {
 }
 
 void SceneManager::ChangeScene(std::unique_ptr<Scene> scene) {
-    if (!m_scenes.empty()) {
-        m_scenes.pop_back();
-    }
-    scene->SetSceneManager(this);
-    m_scenes.push_back(std::move(scene));
+    m_pendingChange = true;
+    m_pendingScene = std::move(scene);
 }
 
 void SceneManager::Update() {
     if (!m_scenes.empty()) {
         m_scenes.back()->Update();
     }
+    ProcessPendingChanges();
 }
 
 void SceneManager::Draw() {
@@ -45,4 +43,18 @@ void SceneManager::RequestQuit() {
 
 bool SceneManager::ShouldQuit() const {
     return m_shouldQuit;
+}
+
+void SceneManager::ProcessPendingChanges() { 
+    if(!m_pendingChange) { 
+        return;
+    }
+    m_pendingChange = false; 
+    if(!m_scenes.empty()){
+        m_scenes.pop_back();
+    } 
+    if(m_pendingScene) {
+        m_pendingScene->SetSceneManager(this);
+        m_scenes.push_back(std::move(m_pendingScene));
+    }
 }
