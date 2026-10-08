@@ -3,6 +3,7 @@
 
 Game::Game() : m_running(false) {
     InitWindow(800, 600, "Oceaner");
+    SetExitKey(KEY_NULL);
 }
 
 Game::~Game() {
