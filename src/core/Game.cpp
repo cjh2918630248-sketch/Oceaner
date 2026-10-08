@@ -23,7 +23,7 @@ void Game::Run() {
 
 void Game::Update() {
     m_sceneManager.Update();
-    if (m_sceneManager.IsEmpty()) {
+    if (m_sceneManager.IsEmpty() || m_sceneManager.ShouldQuit()) {
         m_running = false;
     }
 }
