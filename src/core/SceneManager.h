@@ -15,8 +15,12 @@ public:
     bool IsEmpty() const;
     void Clear();
 
+    void RequestQuit(); 
+    bool ShouldQuit() const;
+
 private:
     std::vector<std::unique_ptr<Scene>> m_scenes;
+    bool m_shouldQuit = false;
 };
 
 #endif
